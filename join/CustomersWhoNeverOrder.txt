@@ -59,7 +59,7 @@ Output:
 +-----------+
 
 ----------------------------------
-/*solution 1: use left join
+/*oracle solution 1: use left join
 The idea is to join the table customers with the table orders based
  on the common customer ID (the column id in customers and the 
 column customerId in orders).
@@ -73,7 +73,7 @@ FROM Customers c
 LEFT JOIN Orders o ON c.Id = o.CustomerId
 WHERE o.CustomerId IS NULL
 
---solution 2:
+--oracle solution 2:
 SELECT name as Customers
 from Customers
 where id not in (
